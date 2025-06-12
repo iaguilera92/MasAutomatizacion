@@ -61,7 +61,7 @@ const ContactoForm = ({ setSnackbar }) => {
                     nombre: name,
                     telefono: phone,
                     mensaje: message,
-                    email: "info@masautomatizacion.cl",
+                    email: "aguilera.matias.s@outlook.com",
                     cc: enviarCopia ? emailCopia : ""
                 },
                 "Oa-0XdMQ4lgneSOXx"
@@ -69,7 +69,7 @@ const ContactoForm = ({ setSnackbar }) => {
             .then(() => {
                 setSnackbar({
                     open: true,
-                    message: "¡Mensaje el correo a masautomatizacion - Consultores con éxito! 📬",
+                    message: "¡Mensaje el correo a MásAutomatización con éxito! 📬",
                     type: "success"
                 });
                 setName("");
@@ -409,7 +409,7 @@ const ContactoForm = ({ setSnackbar }) => {
                                         Ponte en contacto con uno de nuestros ejecutivos para asistirte.
                                     </Typography>
                                     <Button
-                                        href="https://mail.google.com/mail/?view=cm&to=info@masautomatizacion.cl"
+                                        href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.s@outlook.com"
                                         size="small"
                                         variant="text"
                                         sx={{
