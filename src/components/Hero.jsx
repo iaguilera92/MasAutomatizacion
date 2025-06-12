@@ -18,15 +18,19 @@ function Hero({ scrollToContacto, setVideoReady }) {
 
   const texts = [
     {
-      title: "Consultores Ingeniería Eléctrica", description: "Soluciones integrales en consultoría de ingeniería eléctrica."
+      title: "Ingeniería Eléctrica Industrial",
+      description: "Diseño, implementación y mantenimiento de sistemas eléctricos confiables para entornos industriales exigentes."
     },
     {
-      title: "Automatización y Control Procesos", description: "Soluciones en automatización y control de procesos industriales."
+      title: "Automatización de Procesos",
+      description: "Soluciones en control y automatización que optimizan la eficiencia, seguridad y trazabilidad de procesos industriales."
     },
     {
-      title: "Especialidad Eléctrica.", description: "Diseño e implementación de soluciones eléctricas seguras."
+      title: "Supervisión y Control Remoto",
+      description: "Desarrollo de plataformas SCADA y sistemas web para monitoreo en tiempo real desde cualquier dispositivo."
     }
   ];
+
 
   useEffect(() => {
     const interval = setInterval(() => {

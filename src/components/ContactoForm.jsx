@@ -472,7 +472,7 @@ const ContactoForm = ({ setSnackbar }) => {
                                         Escríbenos directamente por WhatsApp para resolver tus dudas.
                                     </Typography>
                                     <Button
-                                        href="https://api.whatsapp.com/send?phone=56962194788"
+                                        href="https://api.whatsapp.com/send?phone=56922292189"
                                         target="_blank"
                                         size="small"
                                         variant="text"

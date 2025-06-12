@@ -8,11 +8,13 @@ import { useNavigate } from "react-router-dom";
 import "./css/Features.css"; // Importamos el CSS
 
 // Datos de ejemplo
-const features = [
-  { id: 1, title: "Automatización y Control", desc: "Optimizamos procesos con soluciones inteligentes en automatización y control industrial.", image: "automatizacion-control.webp" },
-  { id: 2, title: "Evaluación de Proyectos", desc: "Analizamos técnica y financieramente tus ideas para convertirlas en proyectos viables y exitosos.", image: "evaluacion-proyectos.webp" },
-  { id: 3, title: "Modificaciones Industriales", desc: "Optimizamos y adaptamos instalaciones existentes para mejorar procesos, eficiencia y seguridad operacional.", image: "modificaciones-industriales.webp" }
-];
+const features =
+  [
+    { id: 1, title: "Minería y Energía", desc: "Soluciones eléctricas y de automatización para procesos exigentes y entornos críticos.", image: "feature-1.webp" },
+    { id: 2, title: "Agua y Saneamiento", desc: "Automatización y control para sistemas de tratamiento, distribución y monitoreo.", image: "feature-2.webp" },
+    { id: 3, title: "Digitalización y Supervisión Web", desc: "Plataformas SCADA y web para monitoreo remoto y control eficiente.", image: "feature-3.webp" }
+  ];
+
 
 // Animación de aparición desde la derecha con efecto de cascada
 const cardAnimation = {
@@ -158,7 +160,7 @@ function Features({ videoReady, scrollToInformations }) {
                                 const nombreFeature = feature.title;
                                 const mensaje = `¡Hola! Me interesó ${encodeURIComponent(nombreFeature)} ¿Me comentas?`;
                                 window.open(
-                                  `https://api.whatsapp.com/send?phone=56962194788&text=${mensaje}`,
+                                  `https://api.whatsapp.com/send?phone=56922292189&text=${mensaje}`,
                                   "_blank"
                                 );
                               }}
@@ -169,7 +171,7 @@ function Features({ videoReady, scrollToInformations }) {
                                   const nombreFeature = feature.title;
                                   const mensaje = `¡Hola! Me interesó ${encodeURIComponent(nombreFeature)} ¿Me comentas?`;
                                   window.open(
-                                    `https://api.whatsapp.com/send?phone=56962194788&text=${mensaje}`,
+                                    `https://api.whatsapp.com/send?phone=56922292189&text=${mensaje}`,
                                     "_blank"
                                   );
                                 }

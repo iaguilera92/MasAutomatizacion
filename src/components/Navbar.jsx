@@ -623,7 +623,7 @@ function Navbar({ contactoRef, informationsRef, videoReady }) {
             color: "#1a237e",
           }}
         >
-          Presentación masautomatizacion - PDF
+          Presentación MásAutomatización - PDF
           <IconButton
             aria-label="close"
             onClick={handleClosePDF}

@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 
 const data = [
-  { count: 21, text: "Proyectos terminados en distintas empresas", image: "ProyectoTerminado.mp4", },
-  { count: 13, text: "Empresas han confiado en nosotros", image: "Proyecto-pymes.mp4", },
-  { count: 12, text: "Años de Experiencia en Consultoria", image: "Experience.mp4", },
+  { count: 21, text: "Sistemas de control implementados en industrias críticas", image: "ProyectoTerminado.mp4", },
+  { count: 13, text: "Marcas integradas en plataformas PLC, SCADA y DSC", image: "Proyecto-pymes.mp4", },
+  { count: 12, text: "Años de experiencia en automatización industrial", image: "Experience.mp4", },
   { count: 8, text: "Tazas de café en el día ☕", image: "Cafe.mp4", },
 ];
 

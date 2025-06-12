@@ -68,7 +68,7 @@ const Servicios = () => {
     const cargarDatos = async () => {
       if (cancelado) return;
       const timestamp = new Date().getTime();
-      const urlConCacheBust = `https://masautomatizacion-buckets.s3.us-east-2.amazonaws.com/Servicios.xlsx?t=${timestamp}`;
+      const urlConCacheBust = `https://autoges-buckets.s3.us-east-2.amazonaws.com/Servicios.xlsx?t=${timestamp}`;
 
       const datos = await cargarServicios(urlConCacheBust);
       const serviciosConIconos = datos

@@ -140,24 +140,25 @@ const Footer = () => {
 
               <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <img src="telefono-icon.png" alt="Teléfono" width={16} />
-                <Link href="tel:+56962194788" color="inherit">+569 62194788</Link>
+                <Link href="tel:+56922292189" color="inherit">+569 22292189</Link>
               </Typography>
 
               <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <img src="mail-icon.png" alt="Correo" width={16} />
                 <Link
-                  href="https://mail.google.com/mail/?view=cm&to=info@masautomatizacion.cl"
+                  href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.s@outlook.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   color="inherit"
                 >
-                  info@masautomatizacion.cl
+                  aguilera.matias.s@outlook.com
                 </Link>
               </Typography>
 
               <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <img src="location-icon.png" alt="Ubicación" width={16} />
-                Avenida Providencia 1208 Of. 207
+                Santiago centro, Las camelias 015
+
               </Typography>
             </Box>
 
@@ -270,7 +271,7 @@ const Footer = () => {
         {isMobile && (
           <Box display="flex" flexDirection="column" alignItems="center" mb={7}>
             <Box ref={logoRef} sx={{ animation: logoInView ? `${growElement} 1s forwards` : "none" }}>
-              <img src="/logo-react.png" alt="Logo" style={{ height: "65px", marginBottom: "15px", marginTop: "15px", marginRight: "40px" }} />
+              <img src="/logo-masautomatizacion.png" alt="Logo" style={{ height: "65px", marginBottom: "15px", marginTop: "15px", marginRight: "40px" }} />
             </Box>
 
             {/* Redes Sociales */}

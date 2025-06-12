@@ -294,7 +294,7 @@ function App() {
           >
             <IconButton
               onClick={() => {
-                window.open("https://api.whatsapp.com/send?phone=56962194788", "_blank");
+                window.open("https://api.whatsapp.com/send?phone=56922292189", "_blank");
                 setHasInteracted(true);
               }}
               sx={{

@@ -8,7 +8,7 @@ import { MapContainer, TileLayer, Marker, useMapEvent } from "react-leaflet";
 import L from "leaflet";
 import ContactoForm from './ContactoForm';
 
-const finalPosition = [-33.4289774, -70.621146];
+const finalPosition = [-33.39750900661841, -70.70162512883553];
 
 const letterVariants = {
   hidden: { opacity: 0, x: -20 },
@@ -302,7 +302,7 @@ function Contacto() {
                                 pointerEvents: "none",
                               }}
                             >
-                              Av. Providencia 1208 Of. 207
+                              Santiago centro, Las camelias 015
                               <div
                                 style={{
                                   position: "absolute",

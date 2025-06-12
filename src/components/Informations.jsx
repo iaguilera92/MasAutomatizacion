@@ -6,48 +6,49 @@ import { useInView } from 'react-intersection-observer';  // Importa el hook
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./css/Informations.css"; // Importamos el CSS
 import "swiper/css";
-import BoltIcon from '@mui/icons-material/Bolt';
-import EngineeringIcon from '@mui/icons-material/Engineering';
-import TrackChangesIcon from '@mui/icons-material/TrackChanges';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import InsightsIcon from '@mui/icons-material/Insights';
+import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
+import SchoolIcon from '@mui/icons-material/School';
 
 const promotions = [
   {
-    title: "AUTOMATIZACIÓN Y CONTROL",
-    description: "Diseño y desarrollo de sitios web modernos y rápidos para todos los dispositivos.",
+    title: "INTEGRACIÓN MULTIMARCA EN AUTOMATIZACIÓN",
+    description: "Expertos en integración de sistemas PLC, SCADA y DCS líderes del mercado.",
     image: "/Informations-1.webp",
     bgColor: "linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3))",
     textColor: "white",
     descriptors: [
-      "Especificaciones Técnicas Sistemas de Control.",
-      "Diagramas P&ID.",
-      "DataSheet Instrumentación.",
-      "Diseño y Evaluación Redes de control."
+      "Programación y soporte: Siemens, Schneider, Allen Bradley.",
+      "SCADA: AVEVA, Ignition, FactoryTalk, WinCC.",
+      "Protocolos industriales: Modbus, Profinet, OPC-UA.",
+      "Interoperabilidad entre tecnologías y marcas diversas."
     ]
   },
   {
-    title: "ELÉCTRICA",
-    description: "Tienda online, pagos seguros y seguimiento de pedidos. Compra rápido y sin complicaciones.",
+    title: "CAPACITACIÓN Y RELATORÍAS TÉCNICAS",
+    description: "Formamos técnicos y profesionales en automatización y electricidad industrial.",
     image: "/Informations-2.jpg",
     bgColor: "linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))",
     textColor: "white",
     descriptors: [
-      "Especificaciones Técnicas Generales.",
-      "Memorias de Cálculo.",
-      "Diseño y Desarrollo Sistemas SCADA.",
-      "Desarrollo de Planes de Seguridad Eléctrica."
+      "Cursos en PLC, SCADA, IoT y redes industriales.",
+      "Capacitación en normas NFPA 70E y RIC.",
+      "Modelamiento eléctrico BIM MEP aplicado.",
+      "Formación práctica en tecnologías emergentes."
     ]
   },
   {
-    title: "EVALUACIÓN Y GESTIÓN DE PROYECTOS",
-    description: "Desarrollo de sistemas a la medida, eficientes, escalables y adaptados a tus necesidades.",
+    title: "DESARROLLO Y SUPERVISIÓN INDUSTRIAL",
+    description: "Soluciones de digitalización, monitoreo y control de procesos en la nube o local.",
     image: "/Informations-3.webp",
     bgColor: "linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))",
     textColor: "white",
     descriptors: [
-      "Evaluación Financiera de Proyectos.",
-      "Gestión de Proyectos.",
-      "Capacitación Gestión del Proyectos y Software."
+      "Supervisión Web con Node-RED y bases de datos.",
+      "IoT industrial con Siemens IOT2050 y MQTT.",
+      "Implementación en Azure, AWS y OpenCloud.",
+      "SCADA Web, historizadores y analítica en tiempo real."
     ]
   }
 ];
@@ -142,7 +143,7 @@ const Informations = () => {
                 height: "100%",
               }}
             >
-              <BoltIcon sx={{ color: 'black', fontSize: 24 }} />
+              <ElectricalServicesIcon sx={{ color: 'black', fontSize: 24 }} />
             </motion.div>
           </Box>
 
@@ -206,29 +207,29 @@ const Informations = () => {
           <Grid item xs={12} md={6} ref={ref}>
             {[
               {
-                icon: <EngineeringIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
-                text: "Servicios de Ingeniería.",
-                desc: "Soluciones integrales para tus proyectos de ingeniería técnica.",
+                icon: <PrecisionManufacturingIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
+                text: "Ingeniería en Automatización",
+                desc: "Diseño de sistemas de control, integración de PLC, SCADA y protocolos industriales.",
                 hideLine: false,
               },
               {
-                icon: <TrackChangesIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
-                text: "Control de Procesos.",
-                desc: "Optimizamos y automatizamos procesos para mayor eficiencia.",
+                icon: <InsightsIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
+                text: "Supervisión y Control",
+                desc: "Implementación de SCADA, historizadores y plataformas web para monitoreo.",
                 hideLine: false,
               },
               {
-                icon: <LightbulbIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
-                text: "Especialidad Eléctrica.",
-                desc: "Diseño e implementación de soluciones eléctricas seguras.",
+                icon: <ElectricalServicesIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
+                text: "Especialidad Eléctrica",
+                desc: "Diseño, memoria de cálculo y cumplimiento normativo en instalaciones eléctricas.",
                 hideLine: false,
               },
               {
-                icon: <BoltIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
-                text: "Eléctricos.",
-                desc: "Soluciones eficientes en sistemas y equipos eléctricos.",
-                hideLine: true, // Último ítem sin línea hacia abajo
-              },
+                icon: <SchoolIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
+                text: "Capacitación Técnica",
+                desc: "Relatorías en PLC, SCADA, redes industriales y normativa eléctrica vigente.",
+                hideLine: true,
+              }
             ].map((item, index) => {
               const hasLineAbove = index !== 0;
 

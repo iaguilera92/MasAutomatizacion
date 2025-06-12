@@ -88,15 +88,16 @@ const Nosotros = () => {
                       ¿Quiénes Somos?
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#ccc', textAlign: 'justify', mb: 2 }}>
-                      Realizamos Proyectos que aportan valor a nuestros clientes y su entorno. Con foco al posicionamiento de la Industria 4.0.
+                      MAS Ingeniería Eléctrica y Automatización Industrial es una empresa chilena con más de 14 años de experiencia en proyectos de automatización, electrificación industrial e integración tecnológica avanzada.
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#ccc', textAlign: 'justify', mb: 2 }}>
-                      Consultores de Ingeniería con especialidad en Eléctrica, Automatización y Control de Procesos.
+                      Ejecutamos soluciones a medida para sectores como minería, agroindustria, energía y saneamiento, con foco en la eficiencia operativa, la digitalización industrial y la seguridad técnica.
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#ccc', textAlign: 'justify' }}>
-                      Realizamos servicios especializados tanto Eléctricos como para la Evaluación y Gestión de Proyectos Industriales.
+                      Diseñamos arquitecturas OT/IT seguras, desarrollamos sistemas SCADA e IIoT, y automatizamos procesos con PLCs de marcas líderes, bajo estándares normativos y con personal certificado Clase A.
                     </Typography>
                   </CardContent>
+
                 </Card>
               </motion.div>
             </Box>
@@ -111,7 +112,7 @@ const Nosotros = () => {
             >
               <Box textAlign="center">
                 <img
-                  src="/logo-react.png"
+                  src="/logo-masautomatizacion.png"
                   alt="Logo"
                   style={{ maxWidth: isMobile ? '83%' : '100%', height: 'auto' }}
                 />
@@ -216,16 +217,17 @@ const Nosotros = () => {
                       Misión
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#ccc', textAlign: 'left', mb: 3 }}>
-                      Apoyar a los Clientes a cumplir con los desafíos de las Modernizaciones Industriales.
+                      Brindar soluciones integrales en ingeniería eléctrica, automatización y control, que impulsen la eficiencia, seguridad y transformación tecnológica de nuestros clientes industriales.
                     </Typography>
 
                     <Typography variant="h4" color="white" gutterBottom>
                       Visión
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#ccc', textAlign: 'left' }}>
-                      Ser un Referente Nacional en la Evaluación, implementación y Gestión de proyectos de Transformaciones Industriales.
+                      Ser referentes a nivel nacional en el diseño, evaluación y ejecución de proyectos industriales avanzados, contribuyendo al desarrollo sostenible y a la consolidación de la industria 4.0 en Chile.
                     </Typography>
                   </CardContent>
+
                 </Card>
               </motion.div>
             </Box>
