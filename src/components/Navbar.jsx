@@ -32,7 +32,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const socialData = {
   Instagram: { href: "https://www.instagram.com/plataformas.web/?hl=es-la", Icon: InstagramIcon, bgColor: "linear-gradient(45deg, #cf198c, #f41242)", hoverColor: "#cf198c" },
   Facebook: { href: "https://www.facebook.com/profile.php?id=100063452866880", Icon: FacebookIcon, bgColor: "linear-gradient(45deg, #00B5F5, #002A8F)", hoverColor: "#0077b7" },
-  LinkedIn: { href: "https://www.linkedin.com/company/plataformas-web/", Icon: LinkedInIcon, bgColor: "linear-gradient(45deg, #00B5F5, #0077b7)", hoverColor: "#0077b7" }
+  LinkedIn: { href: "https://www.linkedin.com/in/mat%C3%ADas-andr%C3%A9s-aguilera-salinas-399b81123?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", Icon: LinkedInIcon, bgColor: "linear-gradient(45deg, #00B5F5, #0077b7)", hoverColor: "#0077b7" }
 };
 
 
