@@ -146,12 +146,12 @@ const Footer = () => {
               <Typography sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                 <img src="mail-icon.png" alt="Correo" width={16} />
                 <Link
-                  href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.s@outlook.com"
+                  href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.salinas@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   color="inherit"
                 >
-                  aguilera.matias.s@outlook.com
+                  aguilera.matias.salinas@gmail.com
                 </Link>
               </Typography>
 

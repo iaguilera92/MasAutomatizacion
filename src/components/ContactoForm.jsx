@@ -57,7 +57,7 @@ const ContactoForm = ({ setSnackbar }) => {
             nombre: name,
             telefono: phone,
             mensaje: message,
-            email: "aguilera.matias.s@outlook.com",
+            email: "aguilera.matias.salinas@gmail.com",
         };
 
         if (enviarCopia && emailCopia.trim()) {
@@ -414,7 +414,7 @@ const ContactoForm = ({ setSnackbar }) => {
                                         Ponte en contacto con uno de nuestros ejecutivos para asistirte.
                                     </Typography>
                                     <Button
-                                        href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.s@outlook.com"
+                                        href="https://mail.google.com/mail/?view=cm&to=aguilera.matias.salinas@gmail.com"
                                         size="small"
                                         variant="text"
                                         sx={{
