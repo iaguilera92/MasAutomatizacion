@@ -267,7 +267,7 @@ function Navbar({ contactoRef, informationsRef, videoReady }) {
                       }}
                       style={{ cursor: "pointer" }}
                     >
-                      <img src="/logo-masautomatizacion.png" alt="Logo" style={{ filter: 'invert(1) brightness(2)', height: "55px", marginTop: "10px", marginRight: isMobile ? "25px" : "0", cursor: "pointer" }} onClick={LogoInicio} />
+                      <img src="/logo-masautomatizacion-white.png" alt="Logo" style={{ height: "55px", marginTop: "10px", marginRight: isMobile ? "25px" : "0", cursor: "pointer" }} onClick={LogoInicio} />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -435,7 +435,7 @@ function Navbar({ contactoRef, informationsRef, videoReady }) {
                   <Box sx={{ display: "flex", alignItems: "center", mb: 0 }}>
                     <Box
                       component="img"
-                      src="/logo-masautomatizacion.png"
+                      src="/logo-masautomatizacion-white.png"
                       alt="Bienvenidos"
                       sx={{
                         width: 65,

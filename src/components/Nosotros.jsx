@@ -112,7 +112,7 @@ const Nosotros = () => {
             >
               <Box textAlign="center">
                 <img
-                  src="/logo-masautomatizacion.png"
+                  src="/logo-masautomatizacion-white.png"
                   alt="Logo"
                   style={{ maxWidth: isMobile ? '83%' : '100%', height: 'auto' }}
                 />

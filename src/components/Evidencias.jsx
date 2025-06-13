@@ -59,8 +59,8 @@ const Evidencias = () => {
     }, []);
 
     const logos = [
-        '/logo1.jpg', 'logo2.png', '/logo3.jpg', '/logo4.jpg',
-        '/logo5.jpg', '/logo6.jpg', '/logo7.jpg'
+        '/logo-1.jpg', 'logo-2.png', '/logo-3.jpg', '/logo-4.png',
+        '/logo-5.jpg', '/logo-6.jpg', '/logo-7.jpg'
 
     ];
     useEffect(() => {

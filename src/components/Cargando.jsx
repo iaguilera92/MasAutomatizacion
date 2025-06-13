@@ -145,18 +145,18 @@ const Cargando = () => {
 
                     {/* Logo Izquierdo */}
                     <motion.img
-                        src="/logo-masautomatizacion-1.png"
+                        src="/logo-masautomatizacion-1-white.png"
                         alt="masautomatizacion Icono"
-                        style={{ width: 90, height: 'auto', filter: 'invert(1) brightness(2)' }}
+                        style={{ width: 90, height: 'auto' }}
                         animate={showImage ? { rotate: 360 } : { rotate: 0 }}
                         transition={{ repeat: 0, duration: 0.7, ease: 'linear' }}
                     />
 
                     {/* Texto deslizante con fadeIn */}
                     <motion.img
-                        src="/logo-masautomatizacion-2.png"
+                        src="/logo-masautomatizacion-2-white.png"
                         alt="masautomatizacion Consultores"
-                        style={{ width: 180, height: 'auto', filter: 'invert(1) brightness(2)', }}
+                        style={{ width: 180, height: 'auto' }}
                         initial={{ opacity: 0, x: 40 }}
                         animate={showImage ? { opacity: 1, x: 0 } : { x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}

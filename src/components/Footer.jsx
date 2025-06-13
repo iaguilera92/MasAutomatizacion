@@ -172,7 +172,7 @@ const Footer = () => {
                 animation: logoInView ? `${growElement} 1s forwards` : "none",
               }}
             >
-              <img src="/logo-masautomatizacion.png" alt="Logo" style={{ height: "65px", marginBottom: "10px", filter: 'invert(1) brightness(2)' }} />
+              <img src="/logo-masautomatizacion-white.png" alt="Logo" style={{ height: "65px", marginBottom: "10px" }} />
               <Box
                 ref={socialRef}
                 sx={{
@@ -209,7 +209,7 @@ const Footer = () => {
 
                 {/* LinkedIn */}
                 <SocialButton
-                  href="https://www.linkedin.com/company/mittarentacar/?viewAsMember=true"
+                  href="https://www.linkedin.com/in/mat%C3%ADas-andr%C3%A9s-aguilera-salinas-399b81123?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   Icon={LinkedInIcon}
                   bgColor="linear-gradient(45deg, #00B5F5, #0077b7)"
                   hoverStyles={{
