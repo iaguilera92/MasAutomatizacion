@@ -68,7 +68,7 @@ const Servicios = () => {
     const cargarDatos = async () => {
       if (cancelado) return;
       const timestamp = new Date().getTime();
-      const urlConCacheBust = `https://autoges-buckets.s3.us-east-2.amazonaws.com/Servicios.xlsx?t=${timestamp}`;
+      const urlConCacheBust = `https://masautomatizacion.s3.us-east-2.amazonaws.com/Servicios.xlsx?t=${timestamp}`;
 
       const datos = await cargarServicios(urlConCacheBust);
       const serviciosConIconos = datos
@@ -107,7 +107,7 @@ const Servicios = () => {
           </Typography>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.8, ease: 'easeOut' }}>
             <Typography variant="body1" color="white" sx={{ maxWidth: 800, mx: 'auto', fontSize: '1.2rem', fontFamily: '"Segoe UI", sans-serif', lineHeight: 1.6, opacity: 0.9, mt: 1.5 }}>
-              Equipo de Especialistas para Evaluación, Implementación y Gestión de Proyectos Industriales con un Enfoque Tecnológico.            </Typography>
+              Liderazgo Técnico para la Integración de Soluciones en Automatización y Control Industrial           </Typography>
           </motion.div>
         </Box>
 

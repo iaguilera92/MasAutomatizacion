@@ -153,7 +153,6 @@ const SocialButton = ({ href, Icon, bgColor, hoverStyles }) => (
 const menuItems = [
   { name: "Inicio", icon: <Home /> },
   { name: "Servicios", icon: <ViewListIcon /> },
-  { name: "Presentación Empresa", icon: <SlideshowIcon /> },
   { name: "Nosotros", icon: <GroupsIcon /> },
   { name: "Contacto", icon: <Mail /> },
 ];

@@ -60,9 +60,8 @@ const Evidencias = () => {
 
     const logos = [
         '/logo1.jpg', 'logo2.png', '/logo3.jpg', '/logo4.jpg',
-        '/logo5.jpg', '/logo6.jpg', '/logo7.jpg',
-        '/logo12.png', '/logo8.png', '/logo9.avif',
-        '/logo10.jpg', '/logo11.jpg'
+        '/logo5.jpg', '/logo6.jpg', '/logo7.jpg'
+
     ];
     useEffect(() => {
         const observer = new IntersectionObserver(

@@ -51,32 +51,37 @@ const ContactoForm = ({ setSnackbar }) => {
         }
 
         setErrors({});
-        setIsSubmitting(true); // 👈 Bloquea
+        setIsSubmitting(true);
+
+        const templateParams = {
+            nombre: name,
+            telefono: phone,
+            mensaje: message,
+            email: "aguilera.matias.s@outlook.com",
+        };
+
+        if (enviarCopia && emailCopia.trim()) {
+            templateParams.cc = emailCopia;
+        }
 
         emailjs
             .send(
                 "service_29hsjvu",
-                "template_j4i5shl",
-                {
-                    nombre: name,
-                    telefono: phone,
-                    mensaje: message,
-                    email: "aguilera.matias.s@outlook.com",
-                    cc: enviarCopia ? emailCopia : ""
-                },
-                "Oa-0XdMQ4lgneSOXx"
+                "template_j7etx3b",
+                templateParams,
+                "IHD-e11j3sPmmvBA-"
             )
             .then(() => {
                 setSnackbar({
                     open: true,
-                    message: "¡Mensaje el correo a MásAutomatización con éxito! 📬",
+                    message: "¡Mensaje enviado con éxito a MásAutomatización! 📬",
                     type: "success"
                 });
                 setName("");
                 setPhone("");
                 setMessage("");
                 setEmailCopia("");
-                setIsSubmitting(false); // ✅ Desbloquea
+                setIsSubmitting(false);
             })
             .catch((error) => {
                 console.error("Error al enviar el correo:", error);
@@ -85,7 +90,7 @@ const ContactoForm = ({ setSnackbar }) => {
                     message: "Ocurrió un error al enviar el mensaje 😥",
                     type: "error"
                 });
-                setIsSubmitting(false); // ✅ Desbloquea
+                setIsSubmitting(false);
             });
     };
 

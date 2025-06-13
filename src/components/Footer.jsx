@@ -258,9 +258,7 @@ const Footer = () => {
                   gap: 0.5,
                 }}
               >
-                <Link component="button" color="inherit" onClick={handleOpenPDF}>
-                  Ver presentación (PDF)
-                </Link>
+
               </Typography>
             </Box>
 
@@ -324,9 +322,6 @@ const Footer = () => {
                   gap: 0.5,
                 }}
               >
-                <Link component="button" color="inherit" onClick={handleOpenPDF}>
-                  Ver presentación (PDF)
-                </Link>
               </Typography>
             </Box>
           </Box>
