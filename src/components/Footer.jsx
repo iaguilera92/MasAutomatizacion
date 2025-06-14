@@ -269,7 +269,7 @@ const Footer = () => {
         {isMobile && (
           <Box display="flex" flexDirection="column" alignItems="center" mb={7}>
             <Box ref={logoRef} sx={{ animation: logoInView ? `${growElement} 1s forwards` : "none" }}>
-              <img src="/logo-masautomatizacion.png" alt="Logo" style={{ height: "65px", marginBottom: "15px", marginTop: "15px", marginRight: "40px" }} />
+              <img src="/logo-masautomatizacion-white.png" alt="Logo" style={{ height: "65px", marginBottom: "15px", marginTop: "15px", marginRight: "40px" }} />
             </Box>
 
             {/* Redes Sociales */}
