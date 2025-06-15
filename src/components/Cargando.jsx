@@ -143,11 +143,14 @@ const Cargando = () => {
                     }}
                 >
 
-                    {/* Logo Izquierdo */}
                     <motion.img
                         src="/logo-masautomatizacion-1-white.png"
                         alt="masautomatizacion Icono"
-                        style={{ width: 90, height: 'auto' }}
+                        style={{
+                            width: 90,
+                            height: 'auto',
+                            transformOrigin: 'center center',
+                        }}
                         animate={showImage ? { rotate: 360 } : { rotate: 0 }}
                         transition={{ repeat: 0, duration: 0.7, ease: 'linear' }}
                     />
