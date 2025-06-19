@@ -73,7 +73,7 @@ const Informations = () => {
     triggerOnce: true,
   });
   const [hasAnimated, setHasAnimated] = useState(false);
-
+  const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
     if (inView) {
@@ -204,64 +204,75 @@ const Informations = () => {
         <Grid container spacing={3} sx={{ mt: 2 }}>
 
           {/* Columna de los íconos */}
-          <Grid item xs={12} md={6} ref={ref}>
+          <Grid item xs={12} md={6}>
             {[
               {
                 icon: <PrecisionManufacturingIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
                 text: "Ingeniería en Automatización",
-                desc: "Diseño de sistemas de control, integración de PLC, SCADA y protocolos industriales.",
+                desc: "Integración de PLC, SCADA y sistemas de control.",
                 hideLine: false,
               },
               {
                 icon: <InsightsIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
                 text: "Supervisión y Control",
-                desc: "Implementación de SCADA, historizadores y plataformas web para monitoreo.",
+                desc: "SCADA, historizadores y monitoreo web.",
                 hideLine: false,
               },
               {
                 icon: <ElectricalServicesIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
                 text: "Especialidad Eléctrica",
-                desc: "Diseño, memoria de cálculo y cumplimiento normativo en instalaciones eléctricas.",
+                desc: "Diseño eléctrico y cumplimiento normativo.",
                 hideLine: false,
               },
               {
                 icon: <SchoolIcon sx={{ color: "white", fontSize: "2.2rem" }} />,
                 text: "Capacitación Técnica",
-                desc: "Relatorías en PLC, SCADA, redes industriales y normativa eléctrica vigente.",
+                desc: "Cursos en PLC, SCADA y redes industriales.",
                 hideLine: true,
               }
             ].map((item, index) => {
-              const hasLineAbove = index !== 0;
+              const { ref: itemRef, inView: itemInView } = useInView({
+                threshold: 0.43,
+                triggerOnce: true,
+              });
 
               return (
                 <motion.div
-                  key={index}
+                  key={`animated-${index}-${animationKey}`} // 👈 clave dinámica
+                  ref={itemRef}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+                  animate={itemInView ? { opacity: 1, y: 0 } : {}}
                   transition={{
-                    delay: 0.5 * index, // Círculo aparece primero
-                    duration: 0.5,      // Un poco más corto
+                    delay: 0.2 * index,
+                    duration: 0.5,
                   }}
                 >
-                  <ListItem sx={{ display: "flex", alignItems: "center", zIndex: 2 }}>
+                  <ListItem
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      zIndex: 2,
+                      paddingLeft: isMobile ? "0" : "16px",
+                      paddingRight: isMobile ? "0" : "16px",
+                    }}
+                  >
                     <ListItemIcon sx={{ zIndex: 2 }}>
                       <Box
                         sx={{
                           position: "relative",
                           width: 100,
-                          height: 85, // antes era 100
+                          height: 85,
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                         }}
                       >
-                        {/* LÍNEA QUE SUBE DESDE EL CÍRCULO ACTUAL */}
                         {!item.hideLine && (
                           <motion.div
                             initial={{ height: 0 }}
-                            animate={shouldAnimate ? { height: 40 } : { height: 0 }}
+                            animate={itemInView ? { height: 40 } : { height: 0 }}
                             transition={{
-                              delay: 0.5 * index,
+                              delay: 0.2 * index,
                               duration: 1,
                               ease: "easeInOut",
                             }}
@@ -271,18 +282,16 @@ const Informations = () => {
                               left: "50%",
                               transform: "translateX(-50%)",
                               width: "2px",
-                              backgroundImage: "linear-gradient(white 40%, rgba(255,255,255,0) 0%)",
+                              backgroundImage:
+                                "linear-gradient(white 40%, rgba(255,255,255,0) 0%)",
                               backgroundPosition: "left",
-                              backgroundSize: "2px 6px", // grosor y separación
+                              backgroundSize: "2px 6px",
                               backgroundRepeat: "repeat-y",
                               zIndex: 1,
                             }}
                           />
-
                         )}
 
-
-                        {/* CÍRCULO CON ÍCONO */}
                         <Box
                           sx={{
                             width: 70,
@@ -298,8 +307,6 @@ const Informations = () => {
                           }}
                         >
                           {item.icon}
-
-                          {/* Efecto de pulsación */}
                           <motion.div
                             style={{
                               position: "absolute",
@@ -321,7 +328,7 @@ const Informations = () => {
                       sx={{
                         fontFamily: "'Montserrat', Helvetica, Arial, sans-serif !important",
                         "& .MuiListItemText-primary": {
-                          fontSize: "1.2rem",
+                          fontSize: isMobile ? "0.99rem" : "1.2rem",
                         },
                         "& .MuiListItemText-secondary": {
                           color: "white",

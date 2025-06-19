@@ -267,7 +267,15 @@ function Navbar({ contactoRef, informationsRef, videoReady }) {
                       }}
                       style={{ cursor: "pointer" }}
                     >
-                      <img src="/logo-masautomatizacion-white.png" alt="Logo" style={{ height: "55px", marginTop: "10px", marginRight: isMobile ? "25px" : "0", cursor: "pointer" }} onClick={LogoInicio} />
+                      <motion.img
+                        src="/logo-masautomatizacion-white.png"
+                        alt="Logo"
+                        onClick={LogoInicio}
+                        initial={{ scale: 1 }}
+                        animate={{ scale: isScrolled ? 0.8 : 1 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        style={{ height: "55px", marginTop: "10px", cursor: "pointer" }}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
