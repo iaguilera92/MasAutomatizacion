@@ -3,8 +3,6 @@ import {
     Box,
     Typography,
     Grid,
-    Card,
-    CardMedia,
     useTheme,
     useMediaQuery,
     Snackbar,
@@ -32,8 +30,19 @@ const Evidencias = () => {
             transition: { delay: 0.4 + i * 0.1 },
         }),
     };
+    const letterVariants2 = {
+        hidden: { opacity: 0, x: -20 },
+        visible: (i) => ({
+            opacity: 1,
+            x: 0,
+            transition: { delay: 0.2 + i * 0.08 },
+
+        }),
+    };
     const [hasAnimated, setHasAnimated] = useState(false);
     const titulo = "Han confiado en nosotros";
+    const titulo2 = ["Integramos con las", "siguientes marcas"];
+    const offsetLinea1 = titulo2[0].length;
 
     const handleSnackbarOpen = () => setSnackbarOpen(true);
     const handleSnackbarClose = (event, reason) => {
@@ -61,8 +70,13 @@ const Evidencias = () => {
     const logos = [
         '/logo-1.jpg', 'logo-2.png', '/logo-3.jpg', '/logo-4.png',
         '/logo-5.jpg', '/logo-6.jpg', '/logo-7.jpg'
-
     ];
+
+    const marcas = [
+        '/marca-1.webp', '/marca-2.webp', '/marca-3.webp', '/marca-4.webp', '/marca-5.webp'
+        , '/marca-6.webp', '/marca-7.webp', '/marca-8.webp', '/marca-9.webp', '/marca-10.webp'
+    ];
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -284,6 +298,134 @@ const Evidencias = () => {
                                                     />
                                                 </Box>
 
+                                            </motion.div>
+                                        </Grid>
+                                    );
+                                })}
+                            </Grid>
+                            <Box sx={{ textAlign: 'center' }}>
+                                <Typography
+                                    ref={ref}
+                                    variant="h4"
+                                    gutterBottom
+                                    component="div"
+                                    sx={{
+                                        fontFamily: "'Montserrat', Helvetica, Arial, sans-serif",
+                                        fontSize: { xs: "1.3rem", md: "2rem" },
+                                        paddingLeft: { xs: "0", md: "30px" },
+                                        paddingRight: { xs: "0", md: "30px" },
+                                        paddingBottom: { xs: "25px", md: "25px" },
+                                        paddingTop: { xs: "15px", md: "10px" },
+                                        letterSpacing: "3px",
+                                        my: 0,
+                                        position: "relative",
+                                        zIndex: 1,
+                                        backgroundColor: "transparent",
+                                        color: "white",
+                                        display: 'inline-block',
+                                        lineHeight: 1.2,
+                                    }}
+                                >
+
+                                    {titulo2.map((linea, indexLinea) => (
+                                        <Box key={indexLinea} sx={{ display: "block", lineHeight: 1.3 }}>
+                                            {/* Span "|" solo para la primera línea */}
+                                            {indexLinea === 0 && (
+                                                <motion.span
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    animate={inView || hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                                    transition={{ delay: 0.3 }}
+                                                    style={{
+                                                        color: "#8B4513",
+                                                        fontWeight: "bold",
+                                                        fontSize: "0.9em",
+                                                        lineHeight: "inherit",
+                                                        display: "inline-block",
+                                                        verticalAlign: "middle",
+                                                        marginRight: "0",
+                                                        marginBottom: isMobile ? "0px" : "9px"
+                                                    }}
+                                                >
+                                                    |
+                                                </motion.span>
+                                            )}
+                                            {linea.split("").map((char, i) => {
+                                                const globalIndex = indexLinea === 0 ? i : offsetLinea1 + i;
+                                                return (
+                                                    <motion.span
+                                                        key={`${indexLinea}-${i}`}
+                                                        custom={globalIndex}
+                                                        variants={letterVariants2}
+                                                        initial="hidden"
+                                                        animate={inView || hasAnimated ? "visible" : "hidden"}
+                                                        style={{
+                                                            display: "inline-block",
+                                                            whiteSpace: "pre",
+                                                        }}
+                                                    >
+                                                        {char}
+                                                    </motion.span>
+                                                );
+                                            })}
+                                        </Box>
+                                    ))}
+
+
+                                </Typography>
+                            </Box>
+
+
+                            <Grid container spacing={1.5} justifyContent="center">
+                                {marcas.map((logo, i) => {
+                                    const [ref, inView] = useInView({
+                                        triggerOnce: true,
+                                        threshold: 0.2
+                                    });
+
+                                    return (
+                                        <Grid item xs={6} sm={4} md={2.4} key={i} ref={ref}>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 30 }}
+                                                animate={inView ? { opacity: 1, y: 0 } : {}}
+                                                transition={{
+                                                    delay: i * 0.15,
+                                                    duration: 0.4,
+                                                    ease: "easeOut"
+                                                }}
+                                            >
+                                                <Box
+                                                    sx={{
+                                                        backgroundColor: "#fff",
+                                                        borderRadius: 2,
+                                                        overflow: "hidden",
+                                                        height: 110,
+                                                        maxWidth: 200, // ✅ más ancho
+                                                        width: "100%",
+                                                        display: "flex",
+                                                        alignItems: "center",
+                                                        justifyContent: "center",
+                                                        padding: 0.5,
+                                                        mx: "auto", // ✅ centro horizontal
+                                                        transition: "all 0.3s ease",
+                                                        "&:hover img": {
+                                                            filter: "none",
+                                                            transform: "scale(1.05)"
+                                                        }
+                                                    }}
+                                                >
+                                                    <img
+                                                        src={logo}
+                                                        alt={`Logo ${i + 1}`}
+                                                        style={{
+                                                            maxWidth: "160px", // ✅ imagen más ancha
+                                                            width: "100%",
+                                                            height: "100%",
+                                                            objectFit: "contain",
+                                                            display: "block",
+                                                            transition: "all 0.3s ease-in-out"
+                                                        }}
+                                                    />
+                                                </Box>
                                             </motion.div>
                                         </Grid>
                                     );
