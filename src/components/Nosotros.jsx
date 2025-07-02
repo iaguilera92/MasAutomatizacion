@@ -129,7 +129,7 @@ const Nosotros = () => {
           mt: 4,
           mb: 4,
           py: 4,
-          backgroundImage: 'url(/trabajo-consultoria.jpg)',
+          backgroundImage: isMobile ? 'url(/trabajo-consultoria-mobile.jpg)' : 'url(/trabajo-consultoria.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: isMobile ? `center ${scrollY * 0.3}px` : 'center',
           backgroundAttachment: isMobile ? 'scroll' : 'fixed',
