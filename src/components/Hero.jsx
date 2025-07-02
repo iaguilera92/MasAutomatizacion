@@ -19,25 +19,18 @@ function Hero({ scrollToContacto, setVideoReady }) {
   const texts = [
     {
       title: "Ingeniería Eléctrica Industrial",
-      description: "Diseño, implementación y mantenimiento de sistemas eléctricos confiables para entornos industriales exigentes."
+      description: "Sistemas eléctricos seguros y eficientes para entornos industriales."
     },
     {
       title: "Automatización de Procesos",
-      description: "Soluciones en control y automatización que optimizan la eficiencia, seguridad y trazabilidad de procesos industriales."
+      description: "Control y automatización para mejorar eficiencia y seguridad."
     },
     {
       title: "Supervisión y Control Remoto",
-      description: "Desarrollo de plataformas SCADA y sistemas web para monitoreo en tiempo real desde cualquier dispositivo."
+      description: "Monitoreo SCADA en tiempo real desde cualquier dispositivo."
     }
   ];
 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentText((prev) => (prev + 1) % texts.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   // Activa el botón con un delay de 1s después de cargar la página
   useEffect(() => {
