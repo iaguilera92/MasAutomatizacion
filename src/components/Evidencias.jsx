@@ -18,8 +18,16 @@ const Evidencias = () => {
     const videoRef = useRef();
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [visible, setVisible] = useState(false);
-    const { ref, inView } = useInView({
-        threshold: 0.5, triggerOnce: true, rootMargin: '0px 0px -30% 0px' // 👈 esto fuerza que el componente tenga que entrar más al viewport para activarse
+    const { ref: refTitulo1, inView: inViewTitulo1 } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+        rootMargin: '0px 0px -30% 0px'
+    });
+
+    const { ref: refTitulo2, inView: inViewTitulo2 } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+        rootMargin: '0px 0px -30% 0px'
     });
     const sectionRef = useRef();
     const letterVariants = {
@@ -192,7 +200,7 @@ const Evidencias = () => {
                         >
                             <Box sx={{ textAlign: 'center' }}>
                                 <Typography
-                                    ref={ref}
+                                    ref={refTitulo1}
                                     variant="h4"
                                     gutterBottom
                                     component="div"
@@ -215,7 +223,7 @@ const Evidencias = () => {
                                 >
                                     <motion.span
                                         initial={{ opacity: 0, x: -20 }}
-                                        animate={inView || hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                        animate={inViewTitulo1 || hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                         transition={{ delay: 0.3 }}
                                         style={{
                                             color: "#8B4513",
@@ -237,7 +245,7 @@ const Evidencias = () => {
                                             custom={i}
                                             variants={letterVariants}
                                             initial="hidden"
-                                            animate={inView || hasAnimated ? "visible" : "hidden"}
+                                            animate={inViewTitulo1 || hasAnimated ? "visible" : "hidden"}
                                             style={{
                                                 display: "inline-block",
                                                 whiteSpace: "pre",
@@ -305,7 +313,7 @@ const Evidencias = () => {
                             </Grid>
                             <Box sx={{ textAlign: 'center' }}>
                                 <Typography
-                                    ref={ref}
+                                    ref={refTitulo2}
                                     variant="h4"
                                     gutterBottom
                                     component="div"
@@ -333,7 +341,7 @@ const Evidencias = () => {
                                             {indexLinea === 0 && (
                                                 <motion.span
                                                     initial={{ opacity: 0, x: -20 }}
-                                                    animate={inView || hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                                    animate={inViewTitulo2 || hasAnimated ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                                     transition={{ delay: 0.3 }}
                                                     style={{
                                                         color: "#8B4513",
@@ -357,7 +365,7 @@ const Evidencias = () => {
                                                         custom={globalIndex}
                                                         variants={letterVariants2}
                                                         initial="hidden"
-                                                        animate={inView || hasAnimated ? "visible" : "hidden"}
+                                                        animate={inViewTitulo2 || hasAnimated ? "visible" : "hidden"}
                                                         style={{
                                                             display: "inline-block",
                                                             whiteSpace: "pre",
